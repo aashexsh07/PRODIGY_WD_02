@@ -1,0 +1,143 @@
+body {
+    background-image: url("images/bagroung.jpg");
+    position: relative;
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+h1 {
+    font-size: 48px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+
+    text-align: center;
+    line-height: 59px;
+
+    padding: 0;
+    margin: 0;
+  }
+
+.stopwatch {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #display {
+    font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  font-size: 48px;
+  }
+  
+  .controls button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    
+  }
+
+  .laps {
+    height: 300px;
+    overflow: auto;
+  }
+
+  #laps {
+    list-style: none;
+    color: rgb(17, 15, 15);
+    width: 250px;
+    height: 290px;
+    overflow: auto;
+    position: relative;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-image: url(images/matt.jpg);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    color: #e6e5e5;
+    border-radius: 10px;
+    padding: 70px 50px 100px;
+    text-align: left;
+    font-size: 15px;
+    
+  }
+  
+  #laps::-webkit-scrollbar {
+    display: none;
+  }
+
+  #laps-items {
+    display: inline;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    border: 1 px solid #080808;
+    border-radius: 50px;
+    margin-left: 15px;
+  }
+  
+
+
+
+
+  .glow-on-hover {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+  
